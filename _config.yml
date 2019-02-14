@@ -29,6 +29,9 @@ plugins:
 permalink: /posts/:year-:month-:day-:title
 google_analytics: UA-27085900-1
 
+header_pages:
+  - contact.html
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
