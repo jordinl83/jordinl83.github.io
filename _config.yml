@@ -27,6 +27,7 @@ theme: minima
 plugins:
   - jekyll-feed
 permalink: /posts/:year-:month-:day-:title
+google_analytics: UA-27085900-1
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
