@@ -150,8 +150,6 @@ distance = rand(min_distance..max_distance)
 
 delta_lat = rand((-1 * distance)..distance) / 6_371_000
 sign = rand(0..1) * 2 - 1
-puts (Math.cos(distance/earth_radius) - Math.sin(lat) * Math.sin(delta_lat + lat))
-puts (Math.cos(lat) * Math.cos(delta_lat + lat))
 delta_lon = sign * Math.acos(
   ((Math.cos(distance/earth_radius) - Math.cos(delta_lat)) /
     (Math.cos(lat) * Math.cos(delta_lat + lat))) + 1)
