@@ -5,7 +5,7 @@ date:   2019-02-15
 ---
 
 {% raw %}
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 {% endraw %}
 
 ### Introduction
