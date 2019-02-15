@@ -1,5 +1,6 @@
 ---
 layout: default
+title: 
 ---
 
 # Hello I'm Jordi!
