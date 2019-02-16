@@ -24,8 +24,6 @@ linkedin_username: jordinoguera
 # Build settings
 markdown: kramdown
 theme: minima
-plugins:
-  - jekyll-feed
 permalink: /posts/:year-:month-:day-:title
 google_analytics: UA-27085900-1
 
