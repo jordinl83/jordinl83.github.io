@@ -140,6 +140,14 @@ original point. Notice we convert the input from degrees to radians and the outp
 probably be a good idea to use the big decimal library to avoid floating point errors. And lastly, if this is for a web and 
 you need map markers to be at the same spot across refreshes you will have to use a pseudo-random number generator.
 
+<p>
+  <b>Edit:</b> as pointed out in a 
+  <a href="https://www.reddit.com/r/programming/comments/arx95x/how_to_generate_random_geocoordinates_within_a/">discussion</a> 
+  on Reddit, if `\Delta \varphi` is randomly generated between `- \frac{d}{R}` and `\frac {d}{R}` the generated coordinates 
+  are not distributed uniformly. Therefore it's better to generate `\Delta \varphi` with `d / R \ \cos x` where `x` is 
+  a random number between `0` and `\pi`.
+</p>
+
 ```ruby
 lat = (point[0] * Math::PI / 180).to_d
 lon = (point[1] * Math::PI / 180).to_d
@@ -148,8 +156,8 @@ min_distance = 100.to_d
 earth_radius = 6_371_000.to_d
 distance = rand(min_distance..max_distance)
 
-delta_lat = rand((-1 * distance)..distance) / 6_371_000
-sign = rand(0..1) * 2 - 1
+delta_lat = Math.cos(rand *  Math::PI) * distance / earth_radius
+sign = rand(2) * 2 - 1
 delta_lon = sign * Math.acos(
   ((Math.cos(distance/earth_radius) - Math.cos(delta_lat)) /
     (Math.cos(lat) * Math.cos(delta_lat + lat))) + 1)
