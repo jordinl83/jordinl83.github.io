@@ -141,11 +141,16 @@ probably be a good idea to use the big decimal library to avoid floating point e
 you need map markers to be at the same spot across refreshes you will have to use a pseudo-random number generator.
 
 <p>
-  <b>Edit:</b> as pointed out in a 
+  <b>Edit (18-02-2019):</b> as pointed out in a 
   <a href="https://www.reddit.com/r/programming/comments/arx95x/how_to_generate_random_geocoordinates_within_a/">discussion</a> 
-  on Reddit, if `\Delta \varphi` is randomly generated between `- \frac{d}{R}` and `\frac {d}{R}` the generated coordinates 
-  are not distributed uniformly. Therefore it's better to generate `\Delta \varphi` with `d / R \ \cos x` where `x` is 
+  on Reddit, to generate points uniformly across each circle, `\Delta \varphi` needs to be `d / R \ \cos x` where `x` is 
   a random number between `0` and `\pi`.
+</p>
+
+<p>
+  <b>Edit (19-02-2019):</b> Also from the same discussion on Reddit, to generate a uniform ditribution accross the radius,
+  we need to generate points at distance `\sqrt \left(x \left(d_max^2 - d_min^2\right) + d_min^2 \right)` where `x` is a random number 
+  between 0 and 1.
 </p>
 
 ```ruby
@@ -154,7 +159,7 @@ lon = (point[1] * Math::PI / 180).to_d
 max_distance = 200.to_d
 min_distance = 100.to_d
 earth_radius = 6_371_000.to_d
-distance = rand(min_distance..max_distance)
+distance = (rand * (max_distance ** 2 - min_distance ** 2) + min_distance ** 2) ** 0.5
 
 delta_lat = Math.cos(rand *  Math::PI) * distance / earth_radius
 sign = rand(2) * 2 - 1
@@ -167,30 +172,30 @@ delta_lon = sign * Math.acos(
 
 ### Examples
 
-<p>
-Points between 100 meters and 200 meters from the Eiffel Tower, Paris (France)
+<p class='center'>
+  <img src='/assets/img/eiffel-tower.png' alt='Eiffel Tower' />
+  Points between 100 meters and 200 meters away from the Eiffel Tower, Paris (France)
 </p>
-![eiffel-tower](/assets/img/eiffel-tower.png 'Eiffel Tower')
 
-<p>
-Points within 2km from Quito (Ecuador)
+<p class='center'>
+  <img src='/assets/img/quito.png' alt='Quito' />
+  Points between 1.5km and 2km away from Quito (Ecuador)
 </p>
-![quito](/assets/img/quito.png 'Quito')
 
-<p>
-Points at exactly 10km from the Greenwich Observatory, London (UK)
+<p class='center'>
+  <img src='/assets/img/greenwich.png' alt='Greenwich, London' />
+  Points between 8km and 10km away from the Greenwich Observatory, London (UK)
 </p>
-![greenwich](/assets/img/greenwich.png 'Greenwich, London')
 
-<p>
-Points at exactly 100km from La Bombonera, Buenos Aires (Argentina)
+<p class='center'>
+  <img src='/assets/img/buenos-aires.png' alt='Buenos Aires, Argentina' />
+  Points between 50km and 100km away from Buenos Aires (Argentina)
 </p>
-![bombonera](/assets/img/bombonera.png 'La Bombonera, Argentina')
 
-<p>
-Points at exactly 1000km from Denver (Colorado)
+<p class='center'>
+  <img src='/assets/img/denver.png' alt='Denver, Colorado' />
+  Points between 500km and 1000km away from Denver (Colorado)
 </p>
-![denver](/assets/img/denver.png 'Denver, Colorado')
   
 
 
