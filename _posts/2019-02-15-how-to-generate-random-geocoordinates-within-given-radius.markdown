@@ -193,8 +193,8 @@ delta_lon = sign * Math.acos(
 </p>
 
 <p class='center'>
-  <img src='/assets/img/edmonton.png' alt='Edmonton, Canada' />
-  Points between 500km and 1000km away from Edmonton (Canada)
+  <img src='/assets/img/denver.png' alt='Denver, Colorado' />
+  Points between 500km and 1000km away from Denver (Colorado)
 </p>
   
 
