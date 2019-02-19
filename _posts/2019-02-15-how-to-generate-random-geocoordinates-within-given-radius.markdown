@@ -159,7 +159,7 @@ lon = (point[1] * Math::PI / 180).to_d
 max_distance = 200.to_d
 min_distance = 100.to_d
 earth_radius = 6_371_000.to_d
-distance = (rand * (max_distance ** 2 - min_distance ** 2) + min_distance ** 2) ** 0.5
+distance = Math.sqrt(rand * (max_distance ** 2 - min_distance ** 2) + min_distance ** 2)
 
 delta_lat = Math.cos(rand *  Math::PI) * distance / earth_radius
 sign = rand(2) * 2 - 1
