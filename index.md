@@ -40,3 +40,12 @@ Was part of a two people engineering team. The project failed to launch for over
 
 Technologies: Ruby on Rails, Postgres, Heroku, Assembly Payments, Twilio, Google Maps, Sidekiq.
 
+## HNHiring ([hnhiring.com](https://hnhiring.com))
+
+![HNHiring](assets/img/home/hnhiring.png)
+
+HNHiring is an index of jobs from Hacker News' _Who is Hiring?_ posts.
+
+This is a side project that I created a few years ago and I still maintain.
+
+Technologies: Ruby on Rails, Postgres, Heroku.
