@@ -4,11 +4,21 @@ layout: default
 
 # Hello I'm Jordi!
 
-I'm a Software Engineer with more than 10 years experience. I work mainly with Ruby on Rails but I also have extensive experience with NodeJS and ReactJS. I've worked in London, San Francisco and New York, for companies of different sizes, from as little as 3 people to 1000s of people. Now I work remotely from Barcelona, preferably looking for contract work, but I'm open to discuss permanent positions if they sound interesting.
+I'm a Software Engineer with more than 12 years experience. I work mainly with Ruby on Rails but I also have extensive experience with NodeJS and ReactJS. I've worked in London, San Francisco and New York, for companies of different sizes, from as little as 3 people to 1000s of people. Now I work remotely from Barcelona, preferably looking for contract work, but I'm open to discuss permanent positions if they sound interesting.
 
 I can help you get your project through the finish line. I like simplicity and solving complex problems. I can also provide feedback around roadmap, product management and project management. 
 
 Some examples of my work are:
+
+## CNCF Radar ([radar.cncf.io](https://radar.cncf.io))
+
+![CNCF Raaar](assets/img/home/radar.png)
+
+A technology radar is an opinionated guide to a set of emerging technologies. The CNCF End User Technology Radar is intended for a technical audience who want to understand what solutions end users use in cloud native, and which they recommend.
+
+The Radar is an opinionated CMS built with next.js. It allows administrators to add YAML files containing the Radar content and it automatically generates the radar page including the graphical radar and different charts and tables.
+
+Technologies: NodeJS, next.js, React, Netlify.
 
 ## CNCF Landscape ([landscape.cncf.io](https://landscape.cncf.io))
 
