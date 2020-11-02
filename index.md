@@ -30,7 +30,7 @@ I joined this project after it already launched. I was responsible for adding ne
 
 Technologies: NodeJS, React, Netlify.
 
-## Haulhub ([haulhub.com](haulhub.com))
+## Haulhub ([haulhub.com](https://haulhub.com))
 
 ![Haulhub](assets/img/home/haulhub.png)
 
@@ -40,7 +40,7 @@ Was part of a 10+ people engineering team. I worked on building end-to-end featu
 
 Technologies: Ruby on Rails, Postgres, React, Heroku, Sidekiq, Docusign.
 
-## Roomsie ([roomsie.com](roomsie.com))
+## Roomsie ([roomsie.com](https://roomsie.com))
 
 ![Roomsie](assets/img/home/roomsie.png)
 
