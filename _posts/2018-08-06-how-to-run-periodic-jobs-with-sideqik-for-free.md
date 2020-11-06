@@ -18,6 +18,8 @@ Below you can find the implementation for the **_SchedulerWorker_** class and th
 Enjoy.
 
 ```ruby
+# app/workers/scheduler_worker.rb
+
 class SchedulerWorker
   include Sidekiq::Worker
   sidekiq_options queue: 'critical'
@@ -54,6 +56,8 @@ end
 ```
 
 ```ruby
+# config/initializers/sidekiq.rb
+
 Sidekiq.configure_server do |config|
   config.on(:startup) do
     SchedulerWorker.perform_async unless SchedulerWorker.new.scheduled?
