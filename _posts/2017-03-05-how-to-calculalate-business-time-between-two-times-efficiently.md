@@ -89,3 +89,41 @@ Calculate business time on the edges of the interval:
 * Otherwise, for left edge calculate hours between _left edge start time_ and _end of business day_. For _right edge_ calculate hours between _start of business day_ and _right edge end time_.
 
 All this can be calculated in constant time too.
+
+### Operating Hours gem
+
+## Open Source
+
+### Operating Hours
+
+**Update 2020-11-06:** The organization that hosted the **operating_hours** gem was bought by another company and unfortunately all its repos, including **operating_hours** were deleted. 
+
+[Operating Hours](https://github.com/spreemo/operating_hours) is a Ruby Gem that makes time calculations based on business hours. It's inspired by [business_time](https://github.com/bokmann/business_time) but with improved performance. See tables below for a comparison of the performance of calculating the business time between two random dates:
+
+```
+Business time:
+Distance        | Execution time  | Result
+--------------- | --------------- | ---------------
+1 year apart    | 24.077092       | 7257600.0
+6 months apart  | 12.693819       | 3744000.0
+3 months apart  | 6.426698        | 1814400.0
+1 month apart   | 2.466015        | 576000.0
+2 weeks apart   | 1.459892        | 259200.0
+1 week apart    | 1.00986         | 115200.0
+2 days apart    | 0.776951        | 28800.0
+1 day apart     | 0.839757        | 28800.0
+Same day        | 0.595277        | 14400.0
+
+Operating Hours:
+Distance        | Execution time  | Result
+--------------- | --------------- | ---------------
+1 year apart    | 0.00949         | 7257600
+6 months apart  | 0.01707         | 3744000
+3 months apart  | 0.012577        | 1814400
+1 month apart   | 0.029238        | 576000
+2 weeks apart   | 0.018997        | 259200
+1 week apart    | 0.019849        | 115200
+2 days apart    | 0.010557        | 28800
+1 day apart     | 0.016287        | 28800
+Same day        | 0.020898        | 14400
+```
